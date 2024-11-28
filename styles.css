@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(159, 196, 183);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+    padding-top: 20px;
+}
+
+.grid {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    border-color: rgb(20, 20, 20);
+    border: solid;
+    height: 372px;
+    width: 678px;
+    font-size: 70px;
+}
+
+#cell {
+    padding-bottom: 60px;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: rgb(33, 31, 31);
+    border: solid;
+    width: 183px;
+    height: 2px;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.cell0, 
+.cell1, 
+.cell2, 
+.cell3, 
+.cell4, 
+.cell5, 
+.cell6, 
+.cell7, 
+.cell8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner-draw-section {
+    
+}
