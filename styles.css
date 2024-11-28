@@ -1,5 +1,37 @@
 body {
     background-color: rgb(159, 196, 183);
+    margin: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+
+.start-page {
+    background-color: #57b896b3;
+    padding: 200px;
+    margin: 0px;
+}
+
+.welcome-message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    text-decoration: underline;
+    text-decoration-color: #b87084;
+    text-decoration-thickness: 4px; 
+}
+
+.start-button {
+    background-color: #b87084;
+    display: flex;
+    justify-self: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 50px;
+    border-radius: 10px;
+    border: #b87084;
+    cursor: pointer;
 }
 
 .title {
@@ -50,6 +82,3 @@ body {
     align-items: center;
 }
 
-.winner-draw-section {
-    
-}
