@@ -1,13 +1,14 @@
 body {
-    background-color: rgb(159, 196, 183);
     margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
 }
+/* Welcome page */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
-
 .start-page {
-    background-color: #57b896b3;
-    padding: 200px;
+    background-color: #24be88b3;
+    padding: 100px;
     margin: 0px;
 }
 
@@ -34,11 +35,90 @@ body {
     cursor: pointer;
 }
 
+/* Player section */
+.player-selection-page {
+    background-color: #b87084;
+    padding: 50px;
+    margin: 0;
+    padding-bottom: 10px;
+    border: 1px solid transparent;
+}
+
+.name-and-sign {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    padding-bottom: 15px;
+    text-decoration: underline;
+    text-decoration-color: #24be88b3;
+    text-decoration-thickness: 4px; 
+}
+
+.form-group1,
+.form-group2,
+.form-group3,
+.form-group4 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 40px;
+    background-color: #2cd79bb3;
+}
+
+.form-group1,
+.form-group2,
+.form-group3,
+.form-group4 {
+    margin: 40px;
+    margin-left: 280px;
+    margin-right: 280px;
+    border-radius: 25px;
+}
+
+.Player-input {
+    background-color: #b87084;
+    font-family: 'Dancing Script', cursive;;
+    font-size: 25px;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-left: 19px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.submit {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 10px;
+    background-color: #2cd79bb3;
+    cursor: pointer;
+}
+
+/* Game section */
+.game-section {
+    background-color: #24be88b3;
+    margin: 0;
+    padding-top: 0;
+    border: 1px solid transparent;
+
+}
+
 .title {
     display: flex;
     justify-content: center;
-    padding-bottom: 70px;
-    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
 }
 
 .grid {
@@ -47,7 +127,7 @@ body {
     align-self: center;
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 2fr 2fr 2fr;
-    border-color: rgb(20, 20, 20);
+    border-color: rgb(0, 0, 0);
     border: solid;
     height: 372px;
     width: 678px;
@@ -82,3 +162,15 @@ body {
     align-items: center;
 }
 
+/* Winner section */
+.winner-draw-section {
+    background-color: #b87084;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner_or_draw {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}

@@ -14,43 +14,49 @@
   <form action="#" method="post" class="player-selection-page">
     <div class="main-player-form-group">
       <div class="name-and-sign">Enter your Name and Choose X or O!</div>
-      <div class="form-group">
+      <div class="form-group1">
         <label for="Player1name" class="Player1name">Player 1 Name:</label>
-        <input type="text" id="Player1name" name="Player1name">
+        <input type="text" class="Player-input" id="Player1name" name="Player1name">
       </div>
-      <div class="form-group">
+      <div class="form-group2">
         <label for="Player1sign" class="Player1sign">Player 1 Sign:</label>
-        <input type="text" id="Player1sign" name="Player1sign">
+        <input type="text" class="Player-input" id="Player1sign" name="Player1sign">
       </div>
-      <div class="form-group">
+      <div class="form-group3">
         <label for="Player2name" class="Player2name">Player 2 Name:</label>
-        <input type="text" id="Player2name" name="Player2name">
+        <input type="text" class="Player-input" id="Player2name" name="Player2name">
       </div>
-      <div class="form-group">
+      <div class="form-group4">
         <label for="Player2sign" class="Player2name">Player 2 Sign:</label>
-        <input type="text" id="Player2sign" name="Player2sign">
+        <input type="text" class="Player-input" id="Player2sign" name="Player2sign">
+      </div>
+      <div class="button">
+        <button class="submit">Submit</button>
       </div>
     </div>
   </form>
 
-  <h1 class="title">TIC TAC TOE</h1>
-  <div class="grid">
-    <div class="cell cell0" id="cell"></div>
-    <div class="cell cell1" id="cell"></div>
-    <div class="cell cell2" id="cell"></div>
-    <div class="cell cell3" id="cell"></div>
-    <div class="cell cell4" id="cell"></div>
-    <div class="cell cell5" id="cell"></div>
-    <div class="cell cell6" id="cell"></div>
-    <div class="cell cell7" id="cell"></div>
-    <div class="cell cell8" id="cell"></div>
+  <div class="game-section">
+    <h1 class="title">TIC TAC TOE</h1>
+    <div class="grid">
+      <div class="cell cell0" id="cell"></div>
+      <div class="cell cell1" id="cell"></div>
+      <div class="cell cell2" id="cell"></div>
+      <div class="cell cell3" id="cell"></div>
+      <div class="cell cell4" id="cell"></div>
+      <div class="cell cell5" id="cell"></div>
+      <div class="cell cell6" id="cell"></div>
+      <div class="cell cell7" id="cell"></div>
+      <div class="cell cell8" id="cell"></div>
+    </div>
   </div>
+  
 
   <div class="winner-draw-section">
     <div class="winner_or_draw">Winner</div>
   </div>
 
-    <link rel="stylesheet" href="styles.css" />
-    <script src="mainscript.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="mainscript.js"></script>
 </body>
 </html>
