@@ -8,7 +8,7 @@ body {
 
 .start-page {
     background-color: #24be88b3;
-    padding: 100px;
+    padding: 150px;
     margin: 0px;
 }
 
@@ -17,7 +17,7 @@ body {
     font-size: 80px;
     display: flex;
     justify-content: center;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     text-decoration: underline;
     text-decoration-color: #b87084;
     text-decoration-thickness: 4px; 
@@ -38,10 +38,11 @@ body {
 /* Player section */
 .player-selection-page {
     background-color: #b87084;
-    padding: 50px;
+    padding: 10px;
     margin: 0;
     padding-bottom: 10px;
     border: 1px solid transparent;
+
 }
 
 .name-and-sign {
@@ -49,11 +50,21 @@ body {
     justify-content: center;
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    font-size: 80px;
-    padding-bottom: 15px;
+    font-size: 62px;
+    padding-top: 11px;
+    padding-bottom: 6px;
     text-decoration: underline;
     text-decoration-color: #24be88b3;
     text-decoration-thickness: 4px; 
+}
+
+.main-player-form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
 }
 
 .form-group1,
@@ -62,21 +73,23 @@ body {
 .form-group4 {
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-self: center;
+    align-items: center;
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 28px;
     background-color: #2cd79bb3;
+    border-radius: 25px;
+    height: 65.5px;
+    width: 500px;
+    margin: 10px;
 }
 
-.form-group1,
-.form-group2,
-.form-group3,
-.form-group4 {
-    margin: 40px;
-    margin-left: 280px;
-    margin-right: 280px;
-    border-radius: 25px;
+.Player1name,
+.Player1sign,
+.Player2name,
+.Player2sign {
+    align-self: center;
 }
 
 .Player-input {
@@ -97,7 +110,7 @@ body {
 .submit {
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     border-radius: 10px;
     background-color: #2cd79bb3;
     cursor: pointer;
@@ -109,19 +122,25 @@ body {
     margin: 0;
     padding-top: 0;
     border: 1px solid transparent;
+    padding-bottom: 200px;
 
 }
 
 .title {
     display: flex;
     justify-content: center;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-top: 10px;
     font-family: 'Dancing Script', cursive;
     font-size: 70px;
+    font-weight: lighter;
+    text-decoration: underline;
+    text-decoration-color: #b87084;
+    text-decoration-thickness: 4px; 
 }
 
 .grid {
+    background-color: #b87084;
     display: grid;
     justify-self: center;
     align-self: center;
