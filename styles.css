@@ -1,15 +1,15 @@
 body {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
+
 /* Welcome page */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 .start-page {
     background-color: #24be88b3;
-    padding: 150px;
-    margin: 0px;
+    padding: 300px;
 }
 
 .welcome-message {
@@ -17,7 +17,7 @@ body {
     font-size: 80px;
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     text-decoration: underline;
     text-decoration-color: #b87084;
     text-decoration-thickness: 4px; 
@@ -38,10 +38,11 @@ body {
 /* Player section */
 .player-selection-page {
     background-color: #b87084;
-    padding: 10px;
     margin: 0;
-    padding-bottom: 10px;
+    padding-top: 80px;
+    padding-bottom: 50px;
     border: 1px solid transparent;
+    display: none;
 
 }
 
@@ -52,7 +53,7 @@ body {
     font-family: 'Dancing Script', cursive;
     font-size: 62px;
     padding-top: 11px;
-    padding-bottom: 6px;
+    padding-bottom: 40px;
     text-decoration: underline;
     text-decoration-color: #24be88b3;
     text-decoration-thickness: 4px; 
@@ -105,6 +106,8 @@ body {
 .button {
     display: flex;
     justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 70px;
 }
 
 .submit {
@@ -123,6 +126,7 @@ body {
     padding-top: 0;
     border: 1px solid transparent;
     padding-bottom: 200px;
+    display: none;
 
 }
 
@@ -187,6 +191,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .winner_or_draw {

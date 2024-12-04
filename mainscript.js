@@ -22,6 +22,20 @@ if no 3 in a row, its a draw
 reset
 */
 
+/* start game into player section function */
+function startGame() {
+    const start = document.querySelector(".start-button")
+    const playerPage = document.querySelector(".player-selection-page")
+    const startPage = document.querySelector(".start-page")
+
+    start.addEventListener('click', function() {
+        playerPage.style.display = 'block';
+        startPage.style.display = "none"
+    })
+}
+
+
+/* create player factory function */
 function createPlayer(name, sign) {
     return {
         name,
@@ -32,6 +46,7 @@ function createPlayer(name, sign) {
      }
 }
 
+/* Check winner function */
 function checkWin() {
     const cell0 = document.querySelector(".cell0");
     const cell1 = document.querySelector(".cell1");
@@ -90,7 +105,7 @@ function checkWin() {
 
 }
 
-
+/* Game function */
 function Game() {
     const cells = document.querySelectorAll(".cell"); 
 
@@ -148,3 +163,5 @@ function Game() {
 
     });
 }
+
+startGame()
