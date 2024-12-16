@@ -107,12 +107,13 @@ body {
 }
 
 
-.Player-input {
+.Player-input1,
+.Player-input2 {
     background-color: #b87084;
     font-family: 'Dancing Script', cursive;;
     font-size: 25px;
     margin: 10px;
-    border-radius: 20px;
+    border-radius: 16px;
     font-weight: bold;
     margin-left: 19px;
 }
@@ -150,6 +151,7 @@ body {
     border-radius: 10px;
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
+    border-width: 3px;
     cursor: pointer;
     justify-content: center;
 }

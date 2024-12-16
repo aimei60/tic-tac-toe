@@ -34,6 +34,64 @@ function startGame() {
     })
 }
 
+/* allows user to click X and O without both choosing the same symbol */
+function XandOPlayerDeclaration() {
+    const player1X = document.querySelector(".player1-X-button")
+    const player1O = document.querySelector(".player1-O-button")
+    const player2X = document.querySelector(".player2-X-button")
+    const player2O = document.querySelector(".player2-O-button")
+
+    player1X.addEventListener('click', function() {
+        player1X.style.borderColor = "red";
+        player2X.disabled = true;
+        player1O.disabled = true;
+    })
+
+    player1O.addEventListener('click', function() {
+        player1O.style.borderColor = "red";
+        player2O.disabled = true;
+        player1X.disabled = true;
+    })
+
+    player2X.addEventListener('click', function() {
+        player2X.style.borderColor = "red";
+        player1X.disabled = true;
+        player2O.disabled = true;
+    })
+
+    player2O.addEventListener('click', function() {
+        player2O.style.borderColor = "red";
+        player1O.disabled = true;
+        player2X.disabled = true;
+    })
+}
+
+/* captures the players name details for the game section */
+function capturePlayerDetails() {
+    const player1Input = document.querySelector(".Player-input1")
+    const player2Input = document.querySelector(".Player-input2")
+
+    if (player1Input.textContent == "") {
+        player1Input.textContent = "Player 1"
+    }
+
+    if (player2Input.textContent == "") {
+        player2Input.textContent = "Player 2"
+    }
+}
+
+/* start game into player section function and update player details on game page */
+function playerToGame() {
+    const submitButton = document.querySelector(".submit")
+    const playerPage = document.querySelector(".player-selection-page")
+    const gamePage = document.querySelector(".game-section")
+
+    submitButton.addEventListener('click', function() {
+        gamePage.style.display = 'block';
+        playerPage.style.display = "none";
+    })
+}
+
 
 /* create player factory function */
 function createPlayer(name, sign) {
@@ -165,3 +223,5 @@ function Game() {
 }
 
 startGame()
+XandOPlayerDeclaration()
+playerToGame()
