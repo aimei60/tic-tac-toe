@@ -156,6 +156,11 @@ body {
     justify-content: center;
 }
 
+.selected {
+    border-color: red !important;
+    border-width: 3px;
+}
+
 /* Game section */
 .game-section {
     background-color: #24be88b3;
@@ -170,7 +175,7 @@ body {
 .title {
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 10px;
     font-family: 'Dancing Script', cursive;
     font-size: 70px;
@@ -178,6 +183,39 @@ body {
     text-decoration: underline;
     text-decoration-color: #b87084;
     text-decoration-thickness: 4px; 
+    margin: 20px;
+}
+
+.rule {
+    justify-self: center;
+    align-self: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    font-size: 22px;
+    margin: 20px;
+    margin-bottom: 30px;
+    color: #020202;
+    text-decoration: underline;
+    text-decoration-color: #b87084;
+    text-decoration-thickness: 3px;
+}
+
+.player-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    margin: 20px;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    font-size: 20px;
+}
+#summary {
+    justify-self: center;
+    align-self: center;
 }
 
 .grid {
