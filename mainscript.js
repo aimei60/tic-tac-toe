@@ -47,6 +47,9 @@ function XandOPlayerDeclaration() {
 }
 
 /* start game into player section function and update player details on game page */
+let P1Sign = ""
+let P2Sign = ""
+
 function playerToGame() {
     const submitButton = document.querySelector(".submit")
     const playerPage = document.querySelector(".player-selection-page")
@@ -63,12 +66,24 @@ function playerToGame() {
     const player2sign = document.querySelector(".player2sign")
     const player1score = document.querySelector(".player1score")
     const player2score = document.querySelector(".player2score")
+    const div = document.createElement("div")
     let value = 0
 
-
     submitButton.addEventListener('click', function() {
-        gamePage.style.display = 'block';
-        playerPage.style.display = "none";
+        if (player1XButton.classList.contains("selected") || player2XButton.classList.contains("selected") || player1OButton.classList.contains("selected") || player2OButton.classList.contains("selected")) {
+            gamePage.style.display = 'block';
+            playerPage.style.display = "none";
+        } else {
+            div.style.fontFamily = "'Dancing Script', cursive";
+            div.style.fontWeight = "bold";
+            div.style.fontSize = "20px";
+            div.style.backgroundColor = "#2cd79bb3";
+            div.style.borderRadius = "10px";
+            div.style.marginTop = "10px";
+            div.style.padding = "4px";
+            div.textContent = "Choose a sign to play the Game.";
+            document.getElementById("error-message").appendChild(div);
+        }
 
         if (player1Details.value == "") {
             player1.textContent = "Player 1"
@@ -84,27 +99,48 @@ function playerToGame() {
     
 
         if (player1XButton.classList.contains("selected")) {
+            P1Sign = player1XButton.textContent;
             player1sign.textContent = `Player 1 Sign: ${player1XButton.textContent}`;
         } else if (player1OButton.classList.contains("selected")) {
+            P1Sign = player1OButton.textContent;
             player1sign.textContent = `Player 1 Sign: ${player1OButton.textContent}`;
         }
 
         if (player2XButton.classList.contains("selected")) {
+            P2Sign = player2XButton.textContent;
             player2sign.textContent = `Player 2 Sign: ${player2XButton.textContent}`;
         } else if (player2OButton.classList.contains("selected")) {
+            P2Sign = player2OButton.textContent;
             player2sign.textContent = `Player 2 Sign: ${player2OButton.textContent}`;
         }
 
         player1score.textContent = `Player 1 Score: ${value}`
         player2score.textContent = `Player 2 Score: ${value}`
 
+        Game(P1Sign, P2Sign)
     })
-
 }
 
-function Game() {
-    /* player 1 starts always with whatever sign
-    then player 2 goes and alternate*/
+function Game(P1Sign, P2Sign) {
+    const cells = document.querySelectorAll(".cell")
+    let player1 = P1Sign
+    let player2 = P2Sign
+    let currentPlayer = player1
+
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].addEventListener('click', function() {
+            if (cells[i].textContent === "") {
+                cells[i].textContent = currentPlayer
+
+                if (currentPlayer === player1) {
+                    currentPlayer = player2
+                } else {
+                    currentPlayer = player1
+                }
+            }
+        });
+        /* with local storage it lags whenyou refresh the page and the player symbols dont match to with the game */
+    }
 }
 
 function CheckWin() {
@@ -124,6 +160,8 @@ and a pop up of the winner comes on*/
 }
 
 
+
 startGame()
 XandOPlayerDeclaration()
 playerToGame()
+Game()
