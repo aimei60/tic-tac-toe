@@ -114,14 +114,12 @@ function playerToGame() {
             player2sign.textContent = `Player 2 Sign: ${player2OButton.textContent}`;
         }
 
-        player1score.textContent = `Player 1 Score: ${value}`
-        player2score.textContent = `Player 2 Score: ${value}`
-
-        Game(P1Sign, P2Sign)
+        GameAndCheckWin(P1Sign, P2Sign)
+        
     })
 }
 
-function Game(P1Sign, P2Sign) {
+function GameAndCheckWin(P1Sign, P2Sign) {
     const cells = document.querySelectorAll(".cell")
     let player1 = P1Sign
     let player2 = P2Sign
@@ -134,34 +132,47 @@ function Game(P1Sign, P2Sign) {
 
                 if (currentPlayer === player1) {
                     currentPlayer = player2
+                    Win()
                 } else {
                     currentPlayer = player1
+                    Win()
+                    
                 }
             }
         });
-        /* with local storage it lags whenyou refresh the page and the player symbols dont match to with the game */
+    }
+    
+    function Win() {
+        winning_combinations = [
+            [0,1,2],
+            [3,4,5],
+            [6,7,8],
+            [0,3,6],
+            [1,4,7],
+            [2,5,8],
+            [0,4,8],
+            [2,4,6],
+        ]
+
+        for (combination of winning_combinations) {
+            const [a, b, c] = combination;
+            if (cells[a].textContent != "" &&
+                cells[a].textContent === cells[b].textContent &&
+                cells[b].textContent === cells[c].textContent) {
+                    if (cells[a].textContent === player1) {
+                        console.log("Player 1 Wins")
+                    } else if (cells[a].textContent === player2) {
+                        console.log("Player 2 Wins")
+                    }
+                }
+        }
     }
 }
 
-function CheckWin() {
-    /* if there are three X's in a row, horizontal or diagonal:
-player with x wins
-reset
 
-if there are three 0's in a row, horizontal or diagonal:
-player with 0 wins
-reset
-
-if no 3 in a row, its a draw
-reset 
-
-this section also needs to liaise with the html "winner-draw-section" section 
-and a pop up of the winner comes on*/
-}
 
 
 
 startGame()
 XandOPlayerDeclaration()
 playerToGame()
-Game()
