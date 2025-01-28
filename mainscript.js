@@ -46,10 +46,10 @@ function XandOPlayerDeclaration() {
     })
 }
 
-/* start game into player section function and update player details on game page */
 let P1Sign = ""
 let P2Sign = ""
 
+/* start game section into player section function and update player details on game page. This function also calls the game and check win function. */
 function playerToGame() {
     const submitButton = document.querySelector(".submit")
     const playerPage = document.querySelector(".player-selection-page")
@@ -64,10 +64,7 @@ function playerToGame() {
     const player2OButton = document.querySelector(".player2-O-button")
     const player1sign = document.querySelector(".player1sign")
     const player2sign = document.querySelector(".player2sign")
-    const player1score = document.querySelector(".player1score")
-    const player2score = document.querySelector(".player2score")
     const div = document.createElement("div")
-    let value = 0
 
     submitButton.addEventListener('click', function() {
         if (player1XButton.classList.contains("selected") || player2XButton.classList.contains("selected") || player1OButton.classList.contains("selected") || player2OButton.classList.contains("selected")) {
@@ -114,15 +111,21 @@ function playerToGame() {
             player2sign.textContent = `Player 2 Sign: ${player2OButton.textContent}`;
         }
 
-        GameAndCheckWin(P1Sign, P2Sign)
+        GameAndCheckWin(P1Sign, P2Sign, player1Details, player2Details)
         
     })
 }
 
-function GameAndCheckWin(P1Sign, P2Sign) {
+/*function for the game play and checking which player won the game*/
+function GameAndCheckWin(P1Sign, P2Sign, player1Details, player2Details) {
+    const winnerSection = document.querySelector(".winner-draw-section")
+    const winnerResult = document.querySelector(".winner-results")
     const cells = document.querySelectorAll(".cell")
+    const restartGame = document.querySelector(".restart")
     let player1 = P1Sign
     let player2 = P2Sign
+    let player1Name = player1Details.value
+    let player2Name = player2Details.value
     let currentPlayer = player1
 
     for (let i = 0; i < cells.length; i++) {
@@ -141,7 +144,7 @@ function GameAndCheckWin(P1Sign, P2Sign) {
             }
         });
     }
-    
+    /* checks the winning combinations and declares the winning player */
     function Win() {
         winning_combinations = [
             [0,1,2],
@@ -160,18 +163,41 @@ function GameAndCheckWin(P1Sign, P2Sign) {
                 cells[a].textContent === cells[b].textContent &&
                 cells[b].textContent === cells[c].textContent) {
                     if (cells[a].textContent === player1) {
-                        console.log("Player 1 Wins")
+                        winnerSection.style.display = "block"
+                        if (player1Details.value == "") {
+                            winnerResult.textContent = "Player 1 Wins!"
+                        } else { winnerResult.textContent = `${player1Name} Wins!`}
                     } else if (cells[a].textContent === player2) {
-                        console.log("Player 2 Wins")
+                        winnerSection.style.display = "block"
+                        if (player2Details.value == "") {
+                            winnerResult.textContent = "Player 2 Wins!"
+                        } else { winnerResult.textContent = `${player2Name} Wins!`}
                     }
                 }
+        
+        /* declaring if its a draw */        
+        let isDraw = true
+
+        for (const cell of cells) {
+            if (cell.textContent === "") {
+                isDraw = false;
+                break;
+            }
         }
+
+        if (isDraw) {
+            winnerSection.style.display = "block"
+            winnerResult.textContent = "It's a draw!"
+        }
+        
+    }
+    /* restarts the game with a page refresh */
+    restartGame.addEventListener('click', function() {
+        location.reload();
+    })
+
     }
 }
-
-
-
-
 
 startGame()
 XandOPlayerDeclaration()

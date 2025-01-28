@@ -191,7 +191,7 @@ body {
     align-self: center;
     font-family: 'Dancing Script', cursive;
     font-weight: bolder;
-    font-size: 22px;
+    font-size: 25px;
     margin: 20px;
     margin-bottom: 30px;
     color: #020202;
@@ -262,14 +262,41 @@ body {
 
 /* Winner section */
 .winner-draw-section {
-    background-color: #b87084;
+    background-color: #24be88b3;
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw; 
+    height: 100vh;
     display: none;
+    z-index: 1000;
 }
 
-.winner_or_draw {
+.winner_box {
+    background-color: #b87084;
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    display: block;
+    padding: 100px;
+    max-width: 90vw;
+    min-width: 400px;
+    width: 600px;
+    box-sizing: border-box;
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
+    text-align: center;
+}
+
+.restart {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #2cd79bb3;
+    cursor: pointer;
 }
