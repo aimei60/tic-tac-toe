@@ -20,4 +20,4 @@ Here is a preview of the game
 
 ![Screenshot of the Main Game page](Start-Game.png)
 ![Screenshot of the Player section](Player-section.png)
-![Screenshot of the Game section](Player-section.png)
+![Screenshot of the Game section](Game-section.png)
