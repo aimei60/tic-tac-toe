@@ -12,6 +12,7 @@ body {
 .start-page {
     background-color: #24be88b3;
     padding: 300px;
+    height: 100%;
 }
 
 .welcome-message {
@@ -45,6 +46,7 @@ body {
     padding-bottom: 50px;
     border: 1px solid transparent;
     display: none;
+    height: 100%;
 }
 
 .name-and-sign {
@@ -171,6 +173,7 @@ body {
     border: 1px solid transparent;
     padding-bottom: 200px;
     display: none;
+    height: 100%;
 
 }
 
