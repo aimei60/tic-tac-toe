@@ -13,6 +13,9 @@ body {
 .start-page {
     background-color: #24be88b3;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome-message {
@@ -45,8 +48,10 @@ body {
     padding-top: 80px;
     padding-bottom: 50px;
     border: 1px solid transparent;
-    display: none;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .name-and-sign {
@@ -172,8 +177,10 @@ body {
     padding-top: 0;
     border: 1px solid transparent;
     padding-bottom: 200px;
-    display: none;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 
 }
 
