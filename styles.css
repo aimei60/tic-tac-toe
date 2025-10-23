@@ -1,28 +1,21 @@
-* { box-sizing: border-box; }
 html, body {
   margin: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 
 /* Welcome page */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
-.start-page,
-.player-selection-page,
-.game-section {
-  width: 100%;
-  min-height: 100dvh;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 .start-page {
     background-color: #24be88b3;
-    margin: 0;
+    padding-top: 220px;
+    width: 100%;
+    min-height: 100dvh;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome-message {
@@ -54,6 +47,9 @@ html, body {
     padding-top: 80px;
     padding-bottom: 50px;
     border: 1px solid transparent;
+    width: 100%;
+    min-height: 100dvh;
+    min-height: 100vh;
 }
 
 .name-and-sign {
@@ -149,6 +145,8 @@ html, body {
 .player2-buttons {
     padding-left: 10px;
     align-self: center;
+    display: flex;
+    flex-direction: row;
 }
 
 .player1-X-button,
@@ -165,6 +163,7 @@ html, body {
     border-width: 3px;
     cursor: pointer;
     justify-content: center;
+   
 }
 
 .selected {
@@ -179,6 +178,9 @@ html, body {
     padding-top: 0;
     border: 1px solid transparent;
     padding-bottom: 200px;
+    width: 100%;
+    min-height: 100dvh;
+    min-height: 100vh;
 }
 
 .title {
