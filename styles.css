@@ -12,7 +12,9 @@ body {
 
 .start-page {
     background-color: #24be88b3;
-    min-height: 100vh;
+    margin: 0;
+    width: 100vw; 
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,14 +46,15 @@ body {
 /* Player section */
 .player-selection-page {
     background-color: #b87084;
-    margin: 0;
     padding-top: 80px;
     padding-bottom: 50px;
     border: 1px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    margin: 0;
+    width: 100vw; 
+    height: 100vh;
 }
 
 .name-and-sign {
@@ -180,7 +183,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    width: 100vw; 
+    height: 100vh;
 
 }
 
